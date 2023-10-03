@@ -15,7 +15,11 @@ function findTheLeaders($arr) {
         $sum+= $arr[$i]; 
     }
     //se devuelve el array de líderes en orden inverso
-    return array_reverse($leaders);
+    $reversedLeaders = array();
+    for ($j = count($leaders) - 1; $j >= 0; $j--) {
+        $reversedLeaders[] = $leaders[$j];
+    }
+    return $reversedLeaders;
 }
 
 $nums = [0, -1, -29, 3, 2];

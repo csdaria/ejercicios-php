@@ -20,13 +20,18 @@ function elSaltamontes($arr) {
             //Avanzamos la pos actual $pos
             $pos++;
 
-            // Si la posición actual supera el tamaño del array o encontramos un 0, salimos del bucle
-            if ($pos >= count($hops) || $hops[$pos] == 0) {
+            // Si la posición actual supera el número de saltos de la cuenta, salimos del bucle
+            if ($pos >= count($hops)) {
                 break;
             } else {
                 //Agregamps "_" al array resultado
                 $resultado[] = '_';
             }
+
+        }
+
+        if($hopsRef===0){
+            break;
         }
         //Incrementamos la posición actual para el siguiente salto
         $pos++;
